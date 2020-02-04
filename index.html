@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Array</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <p>Cars Array</p>
+    <p>
+        <ul>
+            <script>
+                for (let i=0; i<cars.length; i++) {
+                    document.writeln(`<li>${cars[i]}</li>`);
+                }
+            </script>
+        </ul>
+    </p>
+
+    <p>Makes Array</p>
+
+    <ul>
+        <script>
+            makes.forEach( m => {
+                document.writeln(`<li>${m}</li>`);
+            });
+        </script>
+    </ul>
+
+    <p>print myNumbers array</p>
+
+    <script>
+        if(myNumbers.length > 0) {
+            document.writeln('<ul>');
+            
+            myNumbers.forEach(n => {
+                document.writeln(`<li>${n}</li>`);
+            });
+
+            document.writeln('</ul>');
+
+
+            //shift - removes value from the beginig
+            myNumbers.shift();
+            document.writeln('<ul>');
+            
+            myNumbers.forEach(n => {
+                document.writeln(`<li>${n}</li>`);
+            });
+
+            document.writeln('</ul>');
+
+            //unshift - insets value at the begining
+            myNumbers.unshift(0);
+            document.writeln('<ul>');
+            
+            myNumbers.forEach(n => {
+                document.writeln(`<li>${n}</li>`);
+            });
+
+            document.writeln('</ul>');
+
+
+        } else {
+            document.writeln('no numbers in myNumbers array');
+        }
+    </script>
+
+    <p>print my things</p>
+    <script>
+        let things = [1,2,3,'Aline','wmad'];
+        document.writeln('</ul>');
+
+        for(let t in things) {
+            document.writeln(`<li>${things[t]}</li>`);
+        }
+
+        document.writeln('</ul>');
+    </script>
+
+</body>
+</html>
